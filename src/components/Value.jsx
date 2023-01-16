@@ -14,13 +14,22 @@ const Value = ({ portfolio }) => {
   );
   return (
     <>
-      <div>AusgangsWert: {value.toFixed(2)}</div>
-      <div>Current Portfolio Value: {(value + (curValue - value)).toFixed(2)}</div>
-      <div>Gewinn/Verlust: {(curValue - value).toFixed(2)}</div>
-      <br />
-      <div>Total Dividend: {divi.toFixed(2)}</div>
-      <div>Current value incls Dividend: {(divi + value + curValue - value).toFixed(2)}</div>
-      <div>Gewinn/Verlust inkls Dividend: {(curValue - value + divi).toFixed(2)}</div>
+      <div className="value-info">
+        <div>AusgangsWert: {value.toFixed(2)}</div>
+        <div>
+          Current Portfolio Value: {(value + (curValue - value)).toFixed(2)}
+        </div>
+        <div>Gewinn/Verlust: {(curValue - value).toFixed(2)}</div>
+        <br />
+        <div>Total Dividend: {divi.toFixed(2)}</div>
+        <div>
+          Current value incls Dividend:{" "}
+          {(divi + value + curValue - value).toFixed(2)}
+        </div>
+        <div>
+          Gewinn/Verlust inkls Dividend: {(curValue - value + divi).toFixed(2)}
+        </div>
+      </div>
     </>
   );
 };

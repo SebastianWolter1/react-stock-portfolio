@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { StockContext } from "../global/Context";
 import StockPieChart from "./PieChart.jsx";
 import Value from "./Value.jsx";
 
 const Depot = () => {
-  const { portfolioData, setPortfolioData } = useContext(StockContext);
+  const { portfolioData, setPortfolioData, showNavbar, setShowNavbar } =
+    useContext(StockContext);
 
+ 
   const handleDelete = (index) => {
     const newPortfolio = portfolioData.filter((_, i) => i !== index);
     setPortfolioData(newPortfolio);
@@ -28,6 +30,7 @@ const Depot = () => {
 
   return (
     <div>
+      <br />
       <h1>My Portfolio</h1>
       <br />
       <br />
@@ -85,8 +88,12 @@ const Depot = () => {
                     ).toFixed(2)}
                   </td>
                   <td>
-                    <button onClick={() => handleDelete(index)}>Delete</button>
-                    
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDelete(index)}
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -96,8 +103,11 @@ const Depot = () => {
           <br />
         </>
       )}
-      <Value portfolio={portfolioData} />
-      <StockPieChart portfolioData={portfolioData} />
+      <div className="total-value-info">
+        <Value portfolio={portfolioData} />
+
+        <StockPieChart portfolioData={portfolioData} />
+      </div>
     </div>
   );
 };

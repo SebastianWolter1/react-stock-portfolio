@@ -9,7 +9,6 @@ const App = () => {
 
   return (
     <Layout>
-      {/* <Cake/> */}
       <Routes>
         {routes.map((route) => {
           return <Route key={route.id} {...route} />;
