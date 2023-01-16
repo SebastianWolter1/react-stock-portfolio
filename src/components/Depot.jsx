@@ -7,19 +7,18 @@ const Depot = () => {
   const { portfolioData, setPortfolioData, showNavbar, setShowNavbar } =
     useContext(StockContext);
 
- 
   const handleDelete = (index) => {
     const newPortfolio = portfolioData.filter((_, i) => i !== index);
     setPortfolioData(newPortfolio);
   };
 
-  const handleChange = (index, newValue, newQuantity) => {
+  const handleChange = (index, newValue, newDividend) => {
     const updatedPortfolio = portfolioData.map((stock, i) => {
       if (i === index) {
         return {
           ...stock,
           value: parseFloat(newValue),
-          quantity: parseFloat(newQuantity),
+          dividend: parseFloat(newDividend),
         };
       }
       return stock;
@@ -42,50 +41,54 @@ const Depot = () => {
                 <th>Name</th>
                 <th>Buy In</th>
                 <th>Value</th>
-                <th>Dividend</th>
                 <th>Quantity</th>
-                <th>Wert der Position</th>
-                <th>Veränderung der Position</th>
-                <th>Dividende der Position</th>
+                <th>Dividend % p.A.</th>
+                <th>Position Value</th>
+                <th>Performance</th>
+                <th>Dividende der Position p.A.</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {portfolioData.map((stock, index) => (
                 <tr key={index}>
-                  <td>{stock.name}</td>
-                  <td>{stock.buyIn.toFixed(2)}</td>
+                  <td>
+                    <strong>{stock.name}</strong>
+                  </td>
+                  <td>{stock.buyIn.toFixed(2)}€</td>
                   <td>
                     <input
                       type="number"
                       value={stock.value}
                       onChange={(e) =>
-                        handleChange(index, e.target.value, stock.quantity)
+                        handleChange(index, e.target.value, stock.dividend)
                       }
                     />
                   </td>
-                  <td>{stock.dividend}</td>
+                  <td>{stock.quantity}</td>
                   <td>
                     <input
                       type="number"
-                      value={stock.quantity}
+                      value={stock.dividend}
                       onChange={(e) =>
                         handleChange(index, stock.value, e.target.value)
                       }
                     />
                   </td>
-                  <td>{(stock.value * stock.quantity).toFixed(2)}</td>
+                  <td>{(stock.value * stock.quantity).toFixed(2)}€</td>
                   <td>
                     {(
                       stock.value * stock.quantity -
                       stock.buyIn * stock.quantity
                     ).toFixed(2)}
+                    €
                   </td>
                   <td>
                     {(
                       (stock.value * stock.quantity * stock.dividend) /
                       100
                     ).toFixed(2)}
+                    €
                   </td>
                   <td>
                     <button

@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <>
-      <Themes />
+      {/* <Themes /> */}
       <h1>Portfolio App</h1>
       <img src="../../istockphoto-1127134297-612x612.jpg" alt="" />
       <h3>Login with Password</h3>
