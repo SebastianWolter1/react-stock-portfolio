@@ -1,14 +1,21 @@
 import { NavLink } from "react-router-dom";
 import Themes from "./Themes";
+import { StockContext } from "../global/Context";
+import { useContext } from "react";
+
 
 const NavBar = () => {
+
+  const {showNavbar, setShowNavbar } = useContext(StockContext);
+
   const items = [
     { name: "Home", to: "/" },
-    { name: "Add Stock", to: "/add-stock" },
     { name: "Depot", to: "/depot" },
+    { name: "Add Stock", to: "/add-stock" },
   ];
   return (
     <>
+    {showNavbar &&
       <nav>
         <ul>
           {items.map((item) => {
@@ -22,7 +29,7 @@ const NavBar = () => {
             <Themes />
           </li>
         </ul>
-      </nav>
+      </nav>}
     </>
   );
 };

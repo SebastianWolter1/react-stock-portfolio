@@ -28,6 +28,9 @@ const AddStockForm = () => {
     }
   
     return (
+      <>
+      <h2>What did you buy?</h2>
+      <br />
       <form onSubmit={handleSubmit}>
         <label>
           Stock Name:
@@ -51,6 +54,7 @@ const AddStockForm = () => {
         </label>
         <button type="submit">Add Stock</button>
       </form>
+      </>
     );
   }
   
