@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { StockContext } from "../global/Context";
-import Themes from "./Themes";
+import backgroundpic from "../assets/backgroundpic.jpg"
 
 const Home = () => {
   const { showNavbar, setShowNavbar } = useContext(StockContext);
@@ -33,7 +33,7 @@ const Home = () => {
     <>
       {/* <Themes /> */}
       <h1>Portfolio App</h1>
-      <img src="../../istockphoto-1127134297-612x612.jpg" alt="" />
+      <img src={backgroundpic} alt="" />
       <h3>Login with Password</h3>
       <form className="addstock-wrapper">
         <label>
