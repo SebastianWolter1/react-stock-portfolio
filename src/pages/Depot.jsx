@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
+import StockPieChart from "../features/depot/PieChart";
 import { StockContext } from "../global/Context";
-import StockPieChart from "./PieChart.jsx";
-import Value from "./Value.jsx";
+import Value from "../features/depot/Value.jsx";
 
 const Depot = () => {
   const { portfolioData, setPortfolioData, showNavbar, setShowNavbar } =
@@ -40,7 +40,7 @@ const Depot = () => {
               <tr className="table-head">
                 <th>Name</th>
                 <th>Buy In</th>
-                <th>Value</th>
+                <th>Value €</th>
                 <th>Quantity</th>
                 <th>Dividend % p.A.</th>
                 <th>Position Value</th>

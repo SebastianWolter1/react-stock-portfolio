@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { StockContext } from "../global/Context";
-import Themes from "./Themes";
+import Themes from "../features/globalstyle/Themes";
 
 
 const NavBar = () => {

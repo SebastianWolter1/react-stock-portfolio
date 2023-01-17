@@ -1,7 +1,7 @@
-import Home from "./Home";
-import AddStockForm from "./AddStock";
-import Depot from "./Depot";
-import NotFound from "./NotFound";
+import Home from "../pages/Home";
+import AddStockForm from "../pages/AddStock";
+import Depot from "../pages/Depot";
+import NotFound from "../pages/NotFound";
 
 
 const routes = [

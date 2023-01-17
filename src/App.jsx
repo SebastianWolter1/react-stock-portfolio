@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import "../styles/App.css";
-import Layout from "./Layout";
-import routes from "./routes";
+import Layout from "./layout/Layout";
+import routes from "./routes/routes";
+import "./styles/App.css";
 
 const App = () => {
  

@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { StockContext } from "../global/Context";
-import backgroundpic from "../assets/backgroundpic.jpg"
+import backgroundpic from "../assets/backgroundpic.jpg";
 
 const Home = () => {
-  const { showNavbar, setShowNavbar } = useContext(StockContext);
+  const { setShowNavbar } = useContext(StockContext);
 
   useEffect(() => {
     setShowNavbar(false);
@@ -15,10 +15,8 @@ const Home = () => {
 
   const handleChange = (e) => {
     setPassword(parseFloat(e.target.value));
-    console.log(password);
   };
 
-  console.log(password);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === 12) {

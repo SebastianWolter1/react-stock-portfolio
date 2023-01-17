@@ -1,26 +1,21 @@
-
-.toggler{
-    
-    font-size: .9rem;
-    padding: 7px;
-    border-radius: 10px;
-    width: 100px;
-    text-align: center;
-    background: none;
-    border-radius: 10px;
-    border: none;
-    color: #646cff;
-   
+.toggler {
+  font-size: 0.9rem;
+  padding: 7px;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+  background: none;
+  border-radius: 10px;
+  border: none;
+  color: #646cff;
 }
-.toggler:hover{
+.toggler:hover {
   font-weight: 800;
-
 }
-.box{
-    display: flex;
-    justify-content: center;
+.box {
+  display: flex;
+  justify-content: center;
 }
-
 
 #root {
   max-width: 1280px;
@@ -31,8 +26,6 @@
   height: 100vw;
   line-height: 24px;
   font-weight: 500;
-
- 
 }
 .dark {
   background-color: rgb(0, 0, 0);
@@ -50,21 +43,21 @@ ul {
 a {
   text-decoration: none;
   padding: 80px;
-
+  color: #646cff;
 }
-.footer a{
+
+a:hover {
+  color: #535bf2;
+  font-weight: 800;
+}
+.footer a {
   font-size: 20px;
-
 }
-.footer{
-  /* position: fixed; */
-
+.footer {
   width: 100%;
   margin-top: 150px;
-  
-  
 }
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,15 +66,13 @@ a {
   justify-content: space-around;
   margin-top: 4px;
 }
-.pie{
-margin: 0 auto;
-
+.pie {
+  margin: 0 auto;
 }
-.table{
+.table {
   margin: 0 auto;
   width: 70vw;
 }
-
 .addstock-wrapper {
   display: flex;
   flex-direction: column;
@@ -93,27 +84,21 @@ margin: 0 auto;
   border-radius: 10px;
   width: 300px;
 }
-
 .addstock-wrapper label {
- 
   margin: 10px;
   text-align: center;
   font-size: 16px;
 }
-
 .addstock-wrapper input {
- 
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
 }
-
-.addstock-wrapper button{
-  
+.addstock-wrapper button {
   background-color: #646cff;
-  
+
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -132,8 +117,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -141,29 +124,26 @@ table {
 }
 
 .table-head {
-  background-color:#646cff; ;
+  background-color: #646cff;
   color: white;
 }
-#646cff;
 .table-head th {
   padding: 12px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #ddd;
   padding: 12px;
 }
-
-/* tr:nth-child(even) {
-  background-color: #f2f2f2;
-} */
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-input{
+input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -173,7 +153,7 @@ input{
   font-size: 16px;
 }
 
-.delete-btn{
+.delete-btn {
   background-color: #fd948d;
   padding: 14px 20px;
   margin: 8px 0;
@@ -187,17 +167,37 @@ input{
 .delete-btn:hover {
   background-color: #d32f2f;
 }
-.total-value-info{
+.total-value-info {
   display: flex;
   align-items: center;
-  
 }
 .total-value-info {
   justify-content: space-around;
 }
-.value-info{
+.value-info {
   border: 1px solid black;
   padding: 20px;
   font-size: 16px;
   border-radius: 6px;
+}
+.profit {
+  color: green;
+}
+
+.loss {
+  color: red;
+}
+.modal {
+  margin: 0 auto;
+  width: 50%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+}
+.modal h2 {
+  text-align: center;
 }
