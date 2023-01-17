@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import StockPieChart from "../features/depot/PieChart";
-import { StockContext } from "../global/Context";
 import Value from "../features/depot/Value.jsx";
+import { StockContext } from "../global/Context";
 
 const Depot = () => {
   const { portfolioData, setPortfolioData, showNavbar, setShowNavbar } =

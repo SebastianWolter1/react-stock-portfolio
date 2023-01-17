@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, Legend } from "recharts";
+import { Cell, Legend, Pie, PieChart } from "recharts";
 
 const StockPieChart = ({ portfolioData }) => {
   const data = portfolioData.map((stock) => {

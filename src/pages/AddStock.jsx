@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { StockContext } from "../global/Context";
 import { useNavigate } from "react-router-dom";
+import { StockContext } from "../global/Context";
 
 const AddStockForm = () => {
   const { portfolioData, setPortfolioData } = useContext(StockContext);

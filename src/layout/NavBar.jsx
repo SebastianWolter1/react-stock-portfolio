@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Themes from "../features/globalstyle/Themes";
 import { StockContext } from "../global/Context";
 
 const NavBar = () => {
@@ -39,9 +38,6 @@ const NavBar = () => {
                 </li>
               );
             })}
-            <li>
-              {/* <Themes /> */}
-            </li>
           </ul>
         </nav>
       )}
