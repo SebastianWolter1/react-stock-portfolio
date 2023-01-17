@@ -1,16 +1,32 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { StockContext } from "../global/Context";
 import Themes from "../features/globalstyle/Themes";
 
 const NavBar = () => {
-  const { showNavbar } = useContext(StockContext);
+  const { showNavbar, setShowNavbar } = useContext(StockContext);
 
   const items = [
     { name: "Login", to: "/" },
     { name: "Depot", to: "/depot" },
     { name: "Add Stock", to: "/add-stock" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 50) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {showNavbar && (

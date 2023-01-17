@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     setShowNavbar(false);
-  }, []);
+  });
 
   const navigate = useNavigate();
   const [password, setPassword] = useState();
@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Portfolio App</h1>
+      <h1>Stock Portfolio App</h1>
       <img src={backgroundpic} alt="" />
       <h3>Login with Password</h3>
       <form className="addstock-wrapper">
