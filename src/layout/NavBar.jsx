@@ -31,7 +31,7 @@ const NavBar = () => {
     <>
       {showNavbar && (
         <nav>
-          <ul>
+          <ul className="ul">
             {items.map((item) => {
               return (
                 <li key={item.to}>
@@ -40,7 +40,7 @@ const NavBar = () => {
               );
             })}
             <li>
-              <Themes />
+              {/* <Themes /> */}
             </li>
           </ul>
         </nav>
