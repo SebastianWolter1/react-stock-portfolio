@@ -1,14 +1,23 @@
 import { PieChart, Pie, Cell, Legend } from "recharts";
 
-const StockPieChart = ({portfolioData}) => {
-    const data = portfolioData.map(stock => {
-      return {
-        value: stock.quantity * stock.value,
-        label: stock.name
-      }
-    })
-    console.log(data);
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8", "#4532d4", "#245236", "#194755"];
+const StockPieChart = ({ portfolioData }) => {
+  const data = portfolioData.map((stock) => {
+    return {
+      value: stock.quantity * stock.value,
+      label: stock.name,
+    };
+  });
+  console.log(data);
+  const COLORS = [
+    "#0088FE",
+    "#00C49F",
+    "#FFBB28",
+    "#FF8042",
+    "#8884d8",
+    "#4532d4",
+    "#245236",
+    "#194755",
+  ];
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
     cx,
@@ -51,16 +60,15 @@ const StockPieChart = ({portfolioData}) => {
           <Cell key={index} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
-      <Legend align="right"
+      <Legend
+        align="right"
         layout="horizontal"
-      
-        payload={data.map((item, index)=>{
-          return {value: item.label, color: COLORS[index % COLORS.length]}
-        })}/>
+        payload={data.map((item, index) => {
+          return { value: item.label, color: COLORS[index % COLORS.length] };
+        })}
+      />
     </PieChart>
   );
 };
-
-
 
 export default StockPieChart;

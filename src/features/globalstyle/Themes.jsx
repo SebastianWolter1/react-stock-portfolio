@@ -14,8 +14,10 @@ const Themes = () => {
   }, [theme]);
   return (
     <>
-    <div className="box">
-      <button className="toggler" onClick={toggleTheme}>Light/Dark</button>
+      <div className="box">
+        <button className="toggler" onClick={toggleTheme}>
+          Light/Dark
+        </button>
       </div>
     </>
   );

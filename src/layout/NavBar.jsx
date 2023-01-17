@@ -3,10 +3,8 @@ import { NavLink } from "react-router-dom";
 import { StockContext } from "../global/Context";
 import Themes from "../features/globalstyle/Themes";
 
-
 const NavBar = () => {
-
-  const {showNavbar, setShowNavbar } = useContext(StockContext);
+  const { showNavbar } = useContext(StockContext);
 
   const items = [
     { name: "Login", to: "/" },
@@ -15,21 +13,22 @@ const NavBar = () => {
   ];
   return (
     <>
-    {showNavbar &&
-      <nav>
-        <ul>
-          {items.map((item) => {
-            return (
-              <li key={item.to}>
-                <NavLink to={item.to}>{item.name}</NavLink>
-              </li>
-            );
-          })}
-          <li>
-            <Themes />
-          </li>
-        </ul>
-      </nav>}
+      {showNavbar && (
+        <nav>
+          <ul>
+            {items.map((item) => {
+              return (
+                <li key={item.to}>
+                  <NavLink to={item.to}>{item.name}</NavLink>
+                </li>
+              );
+            })}
+            <li>
+              <Themes />
+            </li>
+          </ul>
+        </nav>
+      )}
     </>
   );
 };

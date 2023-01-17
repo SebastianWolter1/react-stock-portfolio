@@ -2,10 +2,8 @@ import React, { useContext, useState } from "react";
 import { StockContext } from "../global/Context";
 import { useNavigate } from "react-router-dom";
 
-
-
 const AddStockForm = () => {
-  const { portfolioData, setPortfolioData} = useContext(StockContext);
+  const { portfolioData, setPortfolioData } = useContext(StockContext);
 
   const [name, setName] = useState("");
   const [value, setValue] = useState("");
@@ -13,9 +11,7 @@ const AddStockForm = () => {
   const [dividend, setDividend] = useState("");
   const [quantity, setQuantity] = useState("");
 
-
   const navigate = useNavigate();
-
 
   const onAdd = (newStock) => {
     let existingStock = portfolioData.find(
@@ -29,14 +25,11 @@ const AddStockForm = () => {
           newStock.buyIn * newStock.quantity) /
         (existingStock.quantity + newStock.quantity);
       existingStock.quantity = existingStock.quantity + newStock.quantity;
-
     } else {
       const updatedPortfolio = [...portfolioData, newStock];
       setPortfolioData(updatedPortfolio);
     }
   };
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,8 +45,7 @@ const AddStockForm = () => {
     setDividend("");
     setQuantity("");
     setBuyIn("");
-    navigate("/depot")
-    
+    navigate("/depot");
   };
 
   return (
@@ -109,7 +101,6 @@ const AddStockForm = () => {
         </label>
         <button type="submit">Add Stock</button>
       </form>
-     
     </>
   );
 };

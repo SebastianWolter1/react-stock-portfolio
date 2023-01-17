@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { StockContext } from "../global/Context";
 import backgroundpic from "../assets/backgroundpic.jpg";
+import { StockContext } from "../global/Context";
 
 const Home = () => {
   const { setShowNavbar } = useContext(StockContext);
@@ -29,7 +29,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <Themes /> */}
       <h1>Portfolio App</h1>
       <img src={backgroundpic} alt="" />
       <h3>Login with Password</h3>
@@ -39,7 +38,7 @@ const Home = () => {
           <input type="password" name="password" onChange={handleChange} />
         </label>
         <button type="submit" onClick={handleSubmit}>
-          Submit
+          Login
         </button>
       </form>
     </>

@@ -6,11 +6,9 @@ const StockContextProvider = ({ children }) => {
   const [portfolioData, setPortfolioData] = useState(portfolio);
   const [showNavbar, setShowNavbar] = useState(true);
 
-
-
   return (
     <StockContext.Provider
-      value={{ portfolioData, setPortfolioData, showNavbar, setShowNavbar}}
+      value={{ portfolioData, setPortfolioData, showNavbar, setShowNavbar }}
     >
       {children}
     </StockContext.Provider>

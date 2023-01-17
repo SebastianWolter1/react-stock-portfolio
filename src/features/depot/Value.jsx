@@ -13,14 +13,14 @@ const Value = ({ portfolio }) => {
   );
 
   const profitLoss = (curValue - value).toFixed(2);
-  let profitLossStyle = "neutral";
+  let profitLossStyle = "";
   if (profitLoss > 0) {
     profitLossStyle = "profit";
   } else if (profitLoss < 0) {
     profitLossStyle = "loss";
   }
   const profitLossDivi = (curValue - value + divi).toFixed(2);
-  let profitLossDiviStyle = "neutral";
+  let profitLossDiviStyle = "";
   if (profitLossDivi > 0) {
     profitLossDiviStyle = "profit";
   } else if (profitLossDivi < 0) {
@@ -30,19 +30,19 @@ const Value = ({ portfolio }) => {
   return (
     <>
       <div className="value-info">
-        <div>AusgangsWert: {value.toFixed(2)}€</div>
+        <div>Portfolio BuyIn: {value.toFixed(2)}€</div>
         <div>
           Current Portfolio Value: {(value + (curValue - value)).toFixed(2)}€
         </div>
-        <div className={profitLossStyle}>Gewinn/Verlust: {profitLoss}€</div>
+        <div className={profitLossStyle}>Performance: {profitLoss}€</div>
         <br />
-        <div>Total Dividend: {divi.toFixed(2)}€</div>
+        <div>Total Dividend p.A.: {divi.toFixed(2)}€</div>
         <div>
-          Current value incls Dividend:{" "}
+          Current Portfolio Value incl. Dividend:{" "}
           {(divi + value + curValue - value).toFixed(2)}€
         </div>
         <div className={profitLossDiviStyle}>
-          Gewinn/Verlust inkls Dividend: {profitLossDivi}€
+          Performance incl. Dividend: {profitLossDivi}€
         </div>
       </div>
     </>

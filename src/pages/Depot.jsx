@@ -24,7 +24,6 @@ const Depot = () => {
       return stock;
     });
     setPortfolioData(updatedPortfolio);
-    console.log(updatedPortfolio);
   };
 
   return (
@@ -40,12 +39,12 @@ const Depot = () => {
               <tr className="table-head">
                 <th>Name</th>
                 <th>Buy In</th>
-                <th>Value €</th>
+                <th>Current Value €</th>
                 <th>Quantity</th>
                 <th>Dividend % p.A.</th>
-                <th>Position Value</th>
+                <th>Current Position Value</th>
                 <th>Performance</th>
-                <th>Dividende der Position p.A.</th>
+                <th>Position Dividend p.A.</th>
                 <th>Actions</th>
               </tr>
             </thead>

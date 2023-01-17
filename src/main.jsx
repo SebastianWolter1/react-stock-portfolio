@@ -7,8 +7,8 @@ import "./styles/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>
-  <StockContextProvider>
-    <App/>
-  </StockContextProvider>
+    <StockContextProvider>
+      <App />
+    </StockContextProvider>
   </HashRouter>
 );
