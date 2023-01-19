@@ -4,7 +4,7 @@ import Value from "../features/depot/Value.jsx";
 import { StockContext } from "../global/Context";
 
 const Depot = () => {
-  const { portfolioData, setPortfolioData, showNavbar, setShowNavbar } =
+  const { portfolioData, setPortfolioData, } =
     useContext(StockContext);
 
   const handleDelete = (index) => {
